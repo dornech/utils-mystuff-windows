@@ -19,8 +19,8 @@
       "__tooling_packages": "{'commitizen': ['commitizen'], 'semantic-release': ['semantic-release'], 'bump-my-version_and_generate-changelog': ['bump-my-version', 'generate-changelog'], 'none': []}",
       "commitmsg_linter": "toolchain_default",
       "__tooling_commitmsg_linter": "{'toolchain_default': 'commitizen', 'enforce_commitizen': 'commitizen', 'enforce_gitlint': 'gitlint', 'none': '0'}",
-      "lock_file_support": False,
-      "initial_commit": False,
+      "lock_file_support": false,
+      "initial_commit": false,
       "_template": "https://github.com/dornech/the-hatchlor-enhanced.git"
     }
   },
