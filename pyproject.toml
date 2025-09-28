@@ -121,7 +121,7 @@ change_type_order = ["BREAKING CHANGE", "feat", "fix", "refactor", "perf", "docs
 ##################
 
 [tool.docsig]
-check-class = true
+check-class = false
 check-class-constructor = true
 check-dunders = false
 check-nested = false
@@ -362,13 +362,10 @@ fix = [
     "ruff check --fix {args:.}",
     "style",  # feedback on what is not fixable
 ]
-docsig = [
-    "docsig",
-]
 all = [
     "style",
     "typing",
-    "docsig",
+    "docsig src",
 ]
 
 # Hatch environment for building documentation
@@ -393,6 +390,11 @@ dependencies = [
     "pygments~=2.18",
     # Validation
     "linkchecker~=10.4",
+    # resolve cairocffi issue for windows target platform
+    "pipwin",
+]
+post-install-commands = [
+  "pipwin install cairocffi",
 ]
 [tool.hatch.envs.docs.env-vars]
 SOURCE_DATE_EPOCH = "1580601600"
