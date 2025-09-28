@@ -61,6 +61,6 @@ import os
 #         raise ImportError(f"No implementation for your platform ('{os.name}') available")
 
 if os.name == "nt" or sys.platform == "win32":
-    from .utils_win32 import *
+    from utils_win32 import *
 else:
     raise ImportError(f"No implementation of window utilities available for your platform ('{os.name}').")
