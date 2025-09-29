@@ -286,7 +286,7 @@ exclude_lines = [
 
 # Hatch default environment
 [tool.hatch.envs.default]
-python = "3.9"
+# python = "3.9"
 post-install-commands = ["pre-commit install", "pre-commit install --hook-type commit-msg"]
 dependencies = [
     "pre-commit",
@@ -390,11 +390,6 @@ dependencies = [
     "pygments~=2.18",
     # Validation
     "linkchecker~=10.4",
-    # resolve cairocffi issue for windows target platform
-    "pipwin",
-]
-post-install-commands = [
-  "pipwin install cairocffi",
 ]
 [tool.hatch.envs.docs.env-vars]
 SOURCE_DATE_EPOCH = "1580601600"

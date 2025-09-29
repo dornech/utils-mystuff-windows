@@ -1,7 +1,5 @@
 {% if not incremental %}
 # CHANGELOG
-
-
 {% endif %}
 {# Macro: Capitalize the first letter of a string only #}
 {% macro capitalize_first_letter_only(sentence) %}
@@ -9,6 +7,7 @@
 {% endmacro %}
 
 {% for entry in tree %}
+
 
 ## [{{ entry.version }}](https://github.com/dornech/utils-mystuff-windows/releases/tag/{{ entry.version }}) {% if entry.date %} ({{ entry.date }}) {% endif %}
 
@@ -23,8 +22,6 @@
 {% elif change.message %}
 - {{ capitalize_first_letter_only(change.message) }}(['{{ change.sha1[:7] }}'](https://github.com/dornech/utils-mystuff-windows/commit/{{ change.sha1 }}))
 {% endif %}
-
-
 {% endfor %}
 {% endfor %}
 {% endfor %}
