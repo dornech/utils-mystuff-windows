@@ -2,14 +2,12 @@
 
 
 
-## [Unreleased](https://github.com/dornech/utils-mystuff-windows/releases/tag/Unreleased) 
+## [v1.0.0](https://github.com/dornech/utils-mystuff-windows/releases/tag/v1.0.0)  (2025-10-01) 
 
 ### Bug fixes
 
 - Final clean-up before publication
-(['b333986'](https://github.com/dornech/utils-mystuff-windows/commit/b33398600f7d43a4c26103daa7d097cd5cfa4bba))
-- Corrections hatch environment settings, dummy-test module
-(['4ab3f0f'](https://github.com/dornech/utils-mystuff-windows/commit/4ab3f0f38c20ef2b1bdb09bc88a0c1bb73b455a9))
+(['7e301e3'](https://github.com/dornech/utils-mystuff-windows/commit/7e301e37370b5fe01ea86cd17d81fe2cac69e3b0))
 - GitHub build actions must run on windows-latest
 (['953968a'](https://github.com/dornech/utils-mystuff-windows/commit/953968a045fb5ea6490093fb41bc2e6ae2019021))
 - GitHub build actions must run on windows-latest
