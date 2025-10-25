@@ -349,11 +349,11 @@ dependencies = [
 ]
 [tool.hatch.envs.lint.scripts]
 typing = [
-    "echo \"VERSION: `mypy --version`\"",
+    "mypy --version",
     "mypy --install-types --non-interactive {args}"
 ]
 style = [
-    "echo \"VERSION: `ruff --version`\"",
+    "ruff --version",
     "ruff check {args:.}",
     "ruff format --check {args:.}",
 ]

@@ -41,6 +41,7 @@ import win32gui
 
 import time
 
+import utils_mystuff as Utils
 
 
 # find windows from title
@@ -226,3 +227,22 @@ def wait_for_window(title: str, timeout: int = 5, wait: float = 0.25) -> None:
         wait (float, optional): wait time. Defaults to 0.25.
     """
     wait_for_window_win32gui(title, timeout, wait)
+
+
+
+# close file
+def close_app_file(filename: str, msg: str, title: str) -> None:
+    """
+    close_app_file - close data file opened by an application
+
+    Args:
+        filename (str): filename
+        msg (str): message for alert box
+        title (str): title for alert box
+    """
+
+    close_app_windowtitle(filename)
+    if Utils.file_locked(filename):
+        close_app_windowtitle(os.path.splitext(os.path.basename(filename))[0])
+    while Utils.file_locked(filename):
+        Utils.alertbox(msg, title)
