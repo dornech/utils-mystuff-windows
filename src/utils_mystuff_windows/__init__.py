@@ -25,42 +25,15 @@ Raises:
 # fmt: off
 
 
-# version determination
 
-# original Hatchlor version
-# from importlib.metadata import PackageNotFoundError, version
-# try:
-#     __version__ = version('{{ cookiecutter.project_slug }}')
-# except PackageNotFoundError:  # pragma: no cover
-#     __version__ = 'unknown'
-# finally:
-#     del version, PackageNotFoundError
-
-# latest import requirement for hatch-vcs-footgun-example
+# version determination - latest import requirement for hatch-vcs-footgun-example
 from utils_mystuff_windows.version import __version__
-
 
 import sys
 import os
 
-# platform / OS dependent imports
-# inspiration: https://stackoverflow.com/questions/3496592/conditional-import-of-modules-in-python
-# general schema:
-# if sys.platform == "cli":
-#     <import>
-# else:
-#     if os.name == "nt" or sys.platform == "win32":
-#         <import>
-#     elif os.name == "posix":
-#         <import>
-#     elif os.name == "java":
-#         <import>
-#     elif os.name == "macos":
-#         pass
-#     else:
-#         raise ImportError(f"No implementation for your platform ('{os.name}') available")
 
 if os.name == "nt" or sys.platform == "win32":
-    from utils_win32 import *
+    from .utils_win32 import *
 else:
     raise ImportError(f"No implementation of window utilities available for your platform ('{os.name}').")
