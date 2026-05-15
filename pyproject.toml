@@ -286,7 +286,7 @@ exclude_lines = [
 
 # Hatch default environment
 [tool.hatch.envs.default]
-# python = "3.9"
+# python = "3.11"
 post-install-commands = ["pre-commit install", "pre-commit install --hook-type commit-msg"]
 dependencies = [
     "pre-commit",
@@ -328,7 +328,7 @@ debug =  "cov --no-cov -s --pdb --pdbcls=IPython.core.debugger:Pdb {args}"
 # Hatch testing environment matrix for various Python versions replacing the functionality of tox
 [[tool.hatch.envs.test.matrix]]
 template = ["test"]
-python = ["39", "310", "311", "312", "313"]
+python = ["3.10", "3.11", "3.12", "3.13", "3.14"]
 
 # Hatch default linting environment for "hatch fmt"
 [tool.hatch.envs.hatch-static-analysis]
